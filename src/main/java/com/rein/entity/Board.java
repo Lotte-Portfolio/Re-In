@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityListeners(value = { AuditingEntityListener.class })
@@ -31,6 +30,10 @@ public class Board {
     @Column(length = 50, nullable = false)
     private String writer;
 
+    private String boardType;
+
+    private Long fileId;
+
     @CreationTimestamp  //@CreatedDate = LocalDate
     @Column(name = "regdate", updatable = false)
     private LocalDateTime regDate;
@@ -42,5 +45,15 @@ public class Board {
     public void change(String title, String content){
         this.title = title;
         this.content = content;
+        this.boardType = boardType;
+    }
+
+    @Builder
+    public Board(Integer bno, String title, String content, String writer, Long fileId) {
+        this.bno = bno;
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+        this.fileId = fileId;
     }
 }
