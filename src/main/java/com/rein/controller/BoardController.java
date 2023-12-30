@@ -22,6 +22,7 @@ public class BoardController {
 
     private final BoardService boardService;
 
+    // Restful API 처리
     @GetMapping("/api/list")
     @ResponseBody
     public List<BoardDTO> listAll(){
