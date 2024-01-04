@@ -28,6 +28,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.modelmapper:modelmapper:3.1.0'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.1.0'
 	implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'			//QueryDSL 추가1
 	implementation 'com.querydsl:querydsl-apt:5.0.0:jakarta'			//QueryDSL 추가2
